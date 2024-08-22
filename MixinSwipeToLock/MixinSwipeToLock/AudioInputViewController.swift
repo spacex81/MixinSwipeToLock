@@ -1,4 +1,5 @@
 import UIKit
+import Combine
 
 class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
 
@@ -9,12 +10,11 @@ class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
     
     private var longPressGestureBeganPoint = CGPoint.zero
     private var isShowingLockView = false
-    private var isLocked = false {
-        didSet {
-            lockView.isLocked = isLocked
-        }
-    }
-    
+
+    private let viewModel = ContentViewModel.shared
+    private var cancellables = Set<AnyCancellable>()
+
+    private var previousIsLocked: Bool = false
     private let animationDuration: TimeInterval = 0.2
     private let lockDistance: CGFloat = 100
     private let feedback = UIImpactFeedbackGenerator(style: .medium)
@@ -23,14 +23,30 @@ class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         setupUI()
         setupGestureRecognizers()
+        
+        viewModel.$isLocked
+            .sink { [weak self] isLocked in
+                guard let self = self else { return }
+                
+                if self.previousIsLocked && !isLocked {
+                    // If previous state was locked and the new state is not locked
+                    NSLog("LOG: Cancel button pressed, resetting lock view")
+                    self.layoutForStopping()
+                }
+                
+                // Update lock view based on current state
+                self.lockView.isLocked = isLocked
+                
+                // Update previous state
+                self.previousIsLocked = isLocked
+            }
+            .store(in: &cancellables)
     }
     
     private func setupUI() {
         view.addSubview(lockView)
         lockView.translatesAutoresizingMaskIntoConstraints = false
         
-        lockView.layer.borderColor = UIColor.red.cgColor
-        lockView.layer.borderWidth = 2.0
         
         NSLayoutConstraint.activate([
             lockView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -49,16 +65,16 @@ class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
     @objc private func handleLongPress(_ sender: UILongPressGestureRecognizer) {
         switch sender.state {
         case .began:
-            isLocked = false
+            viewModel.isLocked = false
             lockView.progress = 0
             longPressGestureBeganPoint = sender.location(in: view)
         case .changed:
             let location = sender.location(in: view)
             let verticalDistance = longPressGestureBeganPoint.y - location.y
-            if !isLocked {
+            if !viewModel.isLocked {
                 let lockProgress = Float(verticalDistance / lockDistance)
                 if lockProgress >= 1 {
-                    isLocked = true
+                    viewModel.isLocked = true
                     lockView.performLockedIconZoomAnimation {
                         self.fadeOutLockView()
                     }
@@ -67,11 +83,11 @@ class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
                 }
             }
         case .ended:
-            if !isLocked {
+            if !viewModel.isLocked {
                 finishAction(sender)
             }
         case .cancelled:
-            if !isLocked {
+            if !viewModel.isLocked {
                 cancelAction(sender)
             }
         case .possible, .failed:
@@ -92,30 +108,38 @@ class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     private func layoutForStopping() {
-        if isLocked {
-        } else {
-//            fadeOutLockView()
-        }
+        NSLog("LOG: layoutForStopping")
         UIView.animate(withDuration: animationDuration, animations: {
             self.lockView.progress = 0
-            self.preferredContentSize.width = self.view.frame.height
-        }) { (_) in
+            self.lockView.setNeedsLayout() // Ensure layout is updated
+        }) { _ in
+            if !self.viewModel.isLocked {
+//                self.fadeOutLockView() // Ensure lockView fades out and resets
+            }
         }
     }
     
     private func animateShowLockView() {
         isShowingLockView = true
+        UIView.animate(withDuration: animationDuration) {
+            self.view.layoutIfNeeded()
+        }
     }
     
     private func animateHideLockView() {
-        isShowingLockView = false
+        UIView.animate(withDuration: animationDuration, animations: {
+            self.view.layoutIfNeeded()
+        }) { (_) in
+            self.isShowingLockView = false
+        }
     }
     
+    
     private func fadeOutLockView() {
-        UIView.animate(withDuration: animationDuration) {
+        UIView.animate(withDuration: animationDuration, animations: {
             self.lockView.alpha = 0
-        } completion: { _ in
-//            self.lockView.alpha = 1
+        }) { _ in
+            self.lockView.alpha = 1 // Reset alpha to 1 after fade-out
         }
     }
 }

@@ -15,6 +15,7 @@
 		C80F0A9B2C77381D001C550E /* AudioInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F0A9A2C77381D001C550E /* AudioInputViewController.swift */; };
 		C80F0A9D2C77382D001C550E /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F0A9C2C77382D001C550E /* LockView.swift */; };
 		C80F0AA02C77384C001C550E /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C80F0A9F2C77384C001C550E /* RswiftLibrary */; };
+		C80F0AA72C776A20001C550E /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F0AA62C776A20001C550E /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C80F0A982C773813001C550E /* AudioInputViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioInputViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		C80F0A9A2C77381D001C550E /* AudioInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioInputViewController.swift; sourceTree = "<group>"; };
 		C80F0A9C2C77382D001C550E /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
+		C80F0AA62C776A20001C550E /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				C80F0A8A2C77376B001C550E /* MixinSwipeToLockApp.swift */,
 				C80F0A8C2C77376B001C550E /* ContentView.swift */,
+				C80F0AA62C776A20001C550E /* ContentViewModel.swift */,
 				C80F0A982C773813001C550E /* AudioInputViewControllerRepresentable.swift */,
 				C80F0A9A2C77381D001C550E /* AudioInputViewController.swift */,
 				C80F0A9C2C77382D001C550E /* LockView.swift */,
@@ -157,6 +160,7 @@
 			files = (
 				C80F0A8D2C77376B001C550E /* ContentView.swift in Sources */,
 				C80F0A9D2C77382D001C550E /* LockView.swift in Sources */,
+				C80F0AA72C776A20001C550E /* ContentViewModel.swift in Sources */,
 				C80F0A992C773813001C550E /* AudioInputViewControllerRepresentable.swift in Sources */,
 				C80F0A9B2C77381D001C550E /* AudioInputViewController.swift in Sources */,
 				C80F0A8B2C77376B001C550E /* MixinSwipeToLockApp.swift in Sources */,
