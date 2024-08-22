@@ -9,3 +9,8 @@ struct ContentView: View {
         }
     }
 }
+
+#Preview {
+    ContentView()
+        .preferredColorScheme(.dark) // Set dark mode for the preview
+}
