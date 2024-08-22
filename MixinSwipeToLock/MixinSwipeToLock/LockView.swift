@@ -47,47 +47,43 @@ class LockView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         if !isLocked {
             let progress = max(0, min(1, CGFloat(self.progress)))
             
-            // Center alignment
-            let centerX = bounds.width / 2
-            let centerY = bounds.height / 2
-            
-            // Calculate the background frame
+            let centerX = (bounds.width - BackgroundSize.start.width) / 2
+
+            // Calculate the background origin and size
             let backgroundOriginX = BackgroundOrigin.start.x + (BackgroundOrigin.end.x - BackgroundOrigin.start.x) * progress
             let backgroundOriginY = BackgroundOrigin.start.y + (BackgroundOrigin.end.y - BackgroundOrigin.start.y) * progress
             let backgroundWidth = BackgroundSize.start.width + (BackgroundSize.end.width - BackgroundSize.start.width) * progress
             let backgroundHeight = BackgroundSize.start.height + (BackgroundSize.end.height - BackgroundSize.start.height) * progress
 
             backgroundImageView.frame = CGRect(
-                x: (bounds.width - backgroundWidth) / 2,
-                y: (bounds.height - backgroundHeight) / 2,
-                width: backgroundWidth,
-                height: backgroundHeight
+                origin: CGPoint(x: centerX + backgroundOriginX, y: backgroundOriginY),
+                size: CGSize(width: backgroundWidth, height: backgroundHeight)
             )
-            
-            // Center the lock body
+
+            // Calculate the lock body center
             let lockBodyCenterX = LockBodyCenter.start.x + (LockBodyCenter.end.x - LockBodyCenter.start.x) * progress
             let lockBodyCenterY = LockBodyCenter.start.y + (LockBodyCenter.end.y - LockBodyCenter.start.y) * progress
-            lockBodyImageView.center = CGPoint(x: centerX, y: lockBodyCenterY)
-            
-            // Center the lock shackle
+            lockBodyImageView.center = CGPoint(x: centerX + lockBodyCenterX, y: lockBodyCenterY)
+
+            // Calculate the lock shackle center
             let lockShackleCenterX = LockShackleCenter.start.x + (LockShackleCenter.end.x - LockShackleCenter.start.x) * progress
             let lockShackleCenterY = LockShackleCenter.start.y + (LockShackleCenter.end.y - LockShackleCenter.start.y) * progress
-            lockShackleImageView.center = CGPoint(x: centerX, y: lockShackleCenterY)
-            
-            // Center the direction indicator
+            lockShackleImageView.center = CGPoint(x: centerX + lockShackleCenterX, y: lockShackleCenterY)
+
+            // Calculate the direction indicator center
             let directionIndicatorCenterX = DirectionIndicatorCenter.start.x + (DirectionIndicatorCenter.end.x - DirectionIndicatorCenter.start.x) * progress
             let directionIndicatorCenterY = DirectionIndicatorCenter.start.y + (DirectionIndicatorCenter.end.y - DirectionIndicatorCenter.start.y) * progress
-            directionIndicatorImageView.center = CGPoint(x: centerX, y: directionIndicatorCenterY)
-            
+            directionIndicatorImageView.center = CGPoint(x: centerX + directionIndicatorCenterX, y: directionIndicatorCenterY)
+
             // Adjust alpha based on progress
             directionIndicatorImageView.alpha = 1 - progress
         }
     }
 
+    
     private func prepare() {
         bounds.size = BackgroundSize.start
         progress = 0
@@ -97,8 +93,8 @@ class LockView: UIView {
         addSubview(lockBodyImageView)
         addSubview(directionIndicatorImageView)
         
-        layer.borderColor = UIColor.red.cgColor
-        layer.borderWidth = 2.0
+//        layer.borderColor = UIColor.red.cgColor
+//        layer.borderWidth = 2.0
     }
     
     func performLockedIconZoomAnimation(completion: @escaping () -> Void) {
@@ -109,6 +105,7 @@ class LockView: UIView {
             completion()
         }
     }
+    
 }
 
 extension LockView {
