@@ -1,5 +1,4 @@
 import UIKit
-import AVFoundation
 
 class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
 
@@ -59,18 +58,16 @@ class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
             }
         case .ended:
             if !isLocked {
-                finishAction()
+                animateHideLockView()
             }
         case .cancelled:
             if !isLocked {
-                cancelAction()
+                animateHideLockView()
             }
         default:
             break
         }
     }
-    
-    
     
     private func animateShowLockView() {
         isShowingLockView = true
@@ -87,14 +84,5 @@ class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
 //            self.lockView.alpha = 1
         }
     }
-    
-    private func finishAction() {
-        animateHideLockView()
-    }
-    
-    private func cancelAction() {
-        animateHideLockView()
-    }
-    
 }
 
