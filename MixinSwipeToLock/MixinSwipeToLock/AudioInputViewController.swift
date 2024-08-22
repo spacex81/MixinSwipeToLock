@@ -111,12 +111,8 @@ class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
         NSLog("LOG: layoutForStopping")
         UIView.animate(withDuration: animationDuration, animations: {
             self.lockView.progress = 0
-            self.lockView.setNeedsLayout() // Ensure layout is updated
-        }) { _ in
-            if !self.viewModel.isLocked {
-//                self.fadeOutLockView() // Ensure lockView fades out and resets
-            }
-        }
+            self.lockView.setNeedsLayout() 
+        })
     }
     
     private func animateShowLockView() {
