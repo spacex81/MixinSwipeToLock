@@ -15,6 +15,8 @@
 		C85D04352C76FA8A00B3F3CC /* RecorderLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85D04342C76FA8A00B3F3CC /* RecorderLockView.swift */; };
 		C85D04382C76FD1400B3F3CC /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C85D04372C76FD1400B3F3CC /* RswiftLibrary */; };
 		C85D043D2C76FF0F00B3F3CC /* RecorderLockViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85D043C2C76FF0F00B3F3CC /* RecorderLockViewRepresentable.swift */; };
+		C8A0B5D32C77165300E8268B /* AudioInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A0B5D22C77165300E8268B /* AudioInputViewController.swift */; };
+		C8A0B5D62C7716B300E8268B /* AudioInputViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A0B5D52C7716B300E8268B /* AudioInputViewControllerRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		C8458EA22C75A7B400DA6D45 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		C85D04342C76FA8A00B3F3CC /* RecorderLockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderLockView.swift; sourceTree = "<group>"; };
 		C85D043C2C76FF0F00B3F3CC /* RecorderLockViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderLockViewRepresentable.swift; sourceTree = "<group>"; };
+		C8A0B5D22C77165300E8268B /* AudioInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioInputViewController.swift; sourceTree = "<group>"; };
+		C8A0B5D52C7716B300E8268B /* AudioInputViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioInputViewControllerRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				C81DA91D2C74D8F900AD2AA4 /* ContentView.swift */,
 				C85D043C2C76FF0F00B3F3CC /* RecorderLockViewRepresentable.swift */,
 				C85D04342C76FA8A00B3F3CC /* RecorderLockView.swift */,
+				C8A0B5D22C77165300E8268B /* AudioInputViewController.swift */,
+				C8A0B5D52C7716B300E8268B /* AudioInputViewControllerRepresentable.swift */,
 				C8458EA22C75A7B400DA6D45 /* ContentViewModel.swift */,
 				C81DA91F2C74D8FA00AD2AA4 /* Assets.xcassets */,
 				C81DA9212C74D8FA00AD2AA4 /* Preview Content */,
@@ -155,8 +161,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8A0B5D62C7716B300E8268B /* AudioInputViewControllerRepresentable.swift in Sources */,
 				C85D043D2C76FF0F00B3F3CC /* RecorderLockViewRepresentable.swift in Sources */,
 				C81DA91E2C74D8F900AD2AA4 /* ContentView.swift in Sources */,
+				C8A0B5D32C77165300E8268B /* AudioInputViewController.swift in Sources */,
 				C81DA91C2C74D8F900AD2AA4 /* UIKitPanGestureApp.swift in Sources */,
 				C8458EA32C75A7B400DA6D45 /* ContentViewModel.swift in Sources */,
 				C85D04352C76FA8A00B3F3CC /* RecorderLockView.swift in Sources */,
