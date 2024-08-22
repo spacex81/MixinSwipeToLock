@@ -102,12 +102,6 @@ class RecorderLockView: UIView {
         }, completion: nil)
         UIView.animate(withDuration: lockedIconZoomingAnimationDuration, delay: lockedIconZoomingAnimationDuration, options: [.curveEaseOut, .beginFromCurrentState], animations: {
             self.lockedImageView.transform = .identity
-        }, completion: nil)
-        UIView.animate(withDuration: lockedIconZoomingAnimationDuration, delay: lockedIconZoomingAnimationDuration * 2, options: [.curveEaseIn, .beginFromCurrentState], animations: {
-            self.lockedImageView.transform = self.lockedIconZoomingTransform
-        }, completion: nil)
-        UIView.animate(withDuration: lockedIconZoomingAnimationDuration, delay: lockedIconZoomingAnimationDuration * 3, options: [.curveEaseOut, .beginFromCurrentState], animations: {
-            self.lockedImageView.transform = .identity
         }) { (_) in
             completion()
         }
@@ -154,5 +148,4 @@ extension RecorderLockView {
         static let start = CGPoint(x: BackgroundSize.start.width / 2, y: LockBodyCenter.start.y + DirectionIndicatorTopMargin.start + directionIndicationImage.size.height / 2)
         static let end = CGPoint(x: BackgroundSize.end.width / 2, y: LockBodyCenter.end.y + DirectionIndicatorTopMargin.end + directionIndicationImage.size.height / 2)
     }
-    
 }
