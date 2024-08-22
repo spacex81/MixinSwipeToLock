@@ -115,20 +115,6 @@ class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     private func startRecordingIfGranted() {
-//        switch AVAudioSession.sharedInstance().recordPermission {
-//        case .denied:
-//            alertSettings("Microphone access denied.")
-//        case .granted:
-//            if CallService.shared.hasCall {
-//                alert("You are on another call.")
-//            } else {
-//                startRecording()
-//            }
-//        case .undetermined:
-//            AVAudioSession.sharedInstance().requestRecordPermission { _ in }
-//        @unknown default:
-//            alertSettings("Microphone access denied.")
-//        }
     }
     
     private func startRecording() {
@@ -136,19 +122,6 @@ class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
         layoutForRecording()
         recordDuration = 0
         setTimeLabelValue(0)
-//        let tempUrl = URL.createTempUrl(fileExtension: "ogg")
-//        do {
-//            let recorder = try OggOpusRecorder(path: tempUrl.path)
-//            recorder.delegate = self
-//            recorder.record(for: 60) // Max record duration
-//            self.recorder = recorder
-//            self.feedback.impactOccurred()
-//            if displayAwakeningToken == nil {
-//                displayAwakeningToken = DisplayAwakener.shared.retain()
-//            }
-//        } catch {
-//            // Handle error
-//        }
     }
     
     private func layoutForRecording() {
@@ -188,13 +161,11 @@ class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
     
     private func finishAction() {
         layoutForStopping()
-//        recorder?.stop()
         animateHideLockView()
     }
     
     private func cancelAction() {
         layoutForStopping()
-//        recorder?.cancel(for: .userInitiated)
         animateHideLockView()
     }
     
@@ -203,6 +174,3 @@ class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 }
 
-//extension AudioInputViewController: OggOpusRecorderDelegate {
-    // Implement OggOpusRecorderDelegate methods
-////}
