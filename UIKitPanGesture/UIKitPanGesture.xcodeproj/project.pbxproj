@@ -13,6 +13,13 @@
 		C81DA9232C74D8FA00AD2AA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C81DA9222C74D8FA00AD2AA4 /* Preview Assets.xcassets */; };
 		C81DA9422C74E2B300AD2AA4 /* DraggableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DA9412C74E2B300AD2AA4 /* DraggableViewController.swift */; };
 		C81DA9442C74E33300AD2AA4 /* DraggableViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DA9432C74E33300AD2AA4 /* DraggableViewControllerWrapper.swift */; };
+		C8458EA32C75A7B400DA6D45 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8458EA22C75A7B400DA6D45 /* ContentViewModel.swift */; };
+		C85D042F2C76F12400B3F3CC /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85D042E2C76F12400B3F3CC /* RecordButton.swift */; };
+		C85D04312C76F15100B3F3CC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85D04302C76F15100B3F3CC /* UIColorExtension.swift */; };
+		C85D04332C76F1F200B3F3CC /* RecordButtonRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85D04322C76F1F200B3F3CC /* RecordButtonRepresentable.swift */; };
+		C85D04352C76FA8A00B3F3CC /* RecorderLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85D04342C76FA8A00B3F3CC /* RecorderLockView.swift */; };
+		C85D04382C76FD1400B3F3CC /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C85D04372C76FD1400B3F3CC /* RswiftLibrary */; };
+		C85D043D2C76FF0F00B3F3CC /* RecorderLockViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85D043C2C76FF0F00B3F3CC /* RecorderLockViewRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,12 @@
 		C81DA9222C74D8FA00AD2AA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C81DA9412C74E2B300AD2AA4 /* DraggableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableViewController.swift; sourceTree = "<group>"; };
 		C81DA9432C74E33300AD2AA4 /* DraggableViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableViewControllerWrapper.swift; sourceTree = "<group>"; };
+		C8458EA22C75A7B400DA6D45 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		C85D042E2C76F12400B3F3CC /* RecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
+		C85D04302C76F15100B3F3CC /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		C85D04322C76F1F200B3F3CC /* RecordButtonRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButtonRepresentable.swift; sourceTree = "<group>"; };
+		C85D04342C76FA8A00B3F3CC /* RecorderLockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderLockView.swift; sourceTree = "<group>"; };
+		C85D043C2C76FF0F00B3F3CC /* RecorderLockViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderLockViewRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C85D04382C76FD1400B3F3CC /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +71,13 @@
 			children = (
 				C81DA91B2C74D8F900AD2AA4 /* UIKitPanGestureApp.swift */,
 				C81DA91D2C74D8F900AD2AA4 /* ContentView.swift */,
+				C85D043C2C76FF0F00B3F3CC /* RecorderLockViewRepresentable.swift */,
+				C85D04342C76FA8A00B3F3CC /* RecorderLockView.swift */,
+				C8458EA22C75A7B400DA6D45 /* ContentViewModel.swift */,
 				C81DA9412C74E2B300AD2AA4 /* DraggableViewController.swift */,
+				C85D042E2C76F12400B3F3CC /* RecordButton.swift */,
+				C85D04322C76F1F200B3F3CC /* RecordButtonRepresentable.swift */,
+				C85D04302C76F15100B3F3CC /* UIColorExtension.swift */,
 				C81DA9432C74E33300AD2AA4 /* DraggableViewControllerWrapper.swift */,
 				C81DA91F2C74D8FA00AD2AA4 /* Assets.xcassets */,
 				C81DA9212C74D8FA00AD2AA4 /* Preview Content */,
@@ -87,8 +107,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				C85D043A2C76FE4E00B3F3CC /* PBXTargetDependency */,
 			);
 			name = UIKitPanGesture;
+			packageProductDependencies = (
+				C85D04372C76FD1400B3F3CC /* RswiftLibrary */,
+			);
 			productName = UIKitPanGesture;
 			productReference = C81DA9182C74D8F900AD2AA4 /* UIKitPanGesture.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +141,9 @@
 				Base,
 			);
 			mainGroup = C81DA90F2C74D8F900AD2AA4;
+			packageReferences = (
+				C85D04362C76FD1400B3F3CC /* XCRemoteSwiftPackageReference "R.swift" */,
+			);
 			productRefGroup = C81DA9192C74D8F900AD2AA4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,13 +171,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				C81DA9442C74E33300AD2AA4 /* DraggableViewControllerWrapper.swift in Sources */,
+				C85D04332C76F1F200B3F3CC /* RecordButtonRepresentable.swift in Sources */,
+				C85D043D2C76FF0F00B3F3CC /* RecorderLockViewRepresentable.swift in Sources */,
+				C85D04312C76F15100B3F3CC /* UIColorExtension.swift in Sources */,
 				C81DA9422C74E2B300AD2AA4 /* DraggableViewController.swift in Sources */,
+				C85D042F2C76F12400B3F3CC /* RecordButton.swift in Sources */,
 				C81DA91E2C74D8F900AD2AA4 /* ContentView.swift in Sources */,
 				C81DA91C2C74D8F900AD2AA4 /* UIKitPanGestureApp.swift in Sources */,
+				C8458EA32C75A7B400DA6D45 /* ContentViewModel.swift in Sources */,
+				C85D04352C76FA8A00B3F3CC /* RecorderLockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C85D043A2C76FE4E00B3F3CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = C85D04392C76FE4E00B3F3CC /* RswiftGenerateInternalResources */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C81DA9242C74D8FA00AD2AA4 /* Debug */ = {
@@ -352,6 +392,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C85D04362C76FD1400B3F3CC /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C85D04372C76FD1400B3F3CC /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C85D04362C76FD1400B3F3CC /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = RswiftLibrary;
+		};
+		C85D04392C76FE4E00B3F3CC /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C85D04362C76FD1400B3F3CC /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C81DA9102C74D8F900AD2AA4 /* Project object */;
 }
