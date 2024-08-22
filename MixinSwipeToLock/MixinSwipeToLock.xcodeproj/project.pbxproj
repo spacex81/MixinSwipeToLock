@@ -7,73 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C81DA91C2C74D8F900AD2AA4 /* UIKitPanGestureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DA91B2C74D8F900AD2AA4 /* UIKitPanGestureApp.swift */; };
-		C81DA91E2C74D8F900AD2AA4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DA91D2C74D8F900AD2AA4 /* ContentView.swift */; };
-		C81DA9202C74D8FA00AD2AA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C81DA91F2C74D8FA00AD2AA4 /* Assets.xcassets */; };
-		C81DA9232C74D8FA00AD2AA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C81DA9222C74D8FA00AD2AA4 /* Preview Assets.xcassets */; };
-		C85D04352C76FA8A00B3F3CC /* RecorderLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85D04342C76FA8A00B3F3CC /* RecorderLockView.swift */; };
-		C85D04382C76FD1400B3F3CC /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C85D04372C76FD1400B3F3CC /* RswiftLibrary */; };
-		C8A0B5D32C77165300E8268B /* AudioInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A0B5D22C77165300E8268B /* AudioInputViewController.swift */; };
-		C8A0B5D62C7716B300E8268B /* AudioInputViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A0B5D52C7716B300E8268B /* AudioInputViewControllerRepresentable.swift */; };
+		C80F0A8B2C77376B001C550E /* MixinSwipeToLockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F0A8A2C77376B001C550E /* MixinSwipeToLockApp.swift */; };
+		C80F0A8D2C77376B001C550E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F0A8C2C77376B001C550E /* ContentView.swift */; };
+		C80F0A8F2C77376C001C550E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80F0A8E2C77376C001C550E /* Assets.xcassets */; };
+		C80F0A922C77376C001C550E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80F0A912C77376C001C550E /* Preview Assets.xcassets */; };
+		C80F0A992C773813001C550E /* AudioInputViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F0A982C773813001C550E /* AudioInputViewControllerRepresentable.swift */; };
+		C80F0A9B2C77381D001C550E /* AudioInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F0A9A2C77381D001C550E /* AudioInputViewController.swift */; };
+		C80F0A9D2C77382D001C550E /* RecorderLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F0A9C2C77382D001C550E /* RecorderLockView.swift */; };
+		C80F0AA02C77384C001C550E /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C80F0A9F2C77384C001C550E /* RswiftLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C81DA9182C74D8F900AD2AA4 /* UIKitPanGesture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitPanGesture.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C81DA91B2C74D8F900AD2AA4 /* UIKitPanGestureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitPanGestureApp.swift; sourceTree = "<group>"; };
-		C81DA91D2C74D8F900AD2AA4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C81DA91F2C74D8FA00AD2AA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C81DA9222C74D8FA00AD2AA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C85D04342C76FA8A00B3F3CC /* RecorderLockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderLockView.swift; sourceTree = "<group>"; };
-		C8A0B5D22C77165300E8268B /* AudioInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioInputViewController.swift; sourceTree = "<group>"; };
-		C8A0B5D52C7716B300E8268B /* AudioInputViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioInputViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		C80F0A872C77376B001C550E /* MixinSwipeToLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MixinSwipeToLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C80F0A8A2C77376B001C550E /* MixinSwipeToLockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixinSwipeToLockApp.swift; sourceTree = "<group>"; };
+		C80F0A8C2C77376B001C550E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C80F0A8E2C77376C001C550E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C80F0A912C77376C001C550E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C80F0A982C773813001C550E /* AudioInputViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioInputViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		C80F0A9A2C77381D001C550E /* AudioInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioInputViewController.swift; sourceTree = "<group>"; };
+		C80F0A9C2C77382D001C550E /* RecorderLockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderLockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C81DA9152C74D8F900AD2AA4 /* Frameworks */ = {
+		C80F0A842C77376B001C550E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C85D04382C76FD1400B3F3CC /* RswiftLibrary in Frameworks */,
+				C80F0AA02C77384C001C550E /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C81DA90F2C74D8F900AD2AA4 = {
+		C80F0A7E2C77376B001C550E = {
 			isa = PBXGroup;
 			children = (
-				C81DA91A2C74D8F900AD2AA4 /* UIKitPanGesture */,
-				C81DA9192C74D8F900AD2AA4 /* Products */,
+				C80F0A892C77376B001C550E /* MixinSwipeToLock */,
+				C80F0A882C77376B001C550E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C81DA9192C74D8F900AD2AA4 /* Products */ = {
+		C80F0A882C77376B001C550E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C81DA9182C74D8F900AD2AA4 /* UIKitPanGesture.app */,
+				C80F0A872C77376B001C550E /* MixinSwipeToLock.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C81DA91A2C74D8F900AD2AA4 /* UIKitPanGesture */ = {
+		C80F0A892C77376B001C550E /* MixinSwipeToLock */ = {
 			isa = PBXGroup;
 			children = (
-				C81DA91B2C74D8F900AD2AA4 /* UIKitPanGestureApp.swift */,
-				C81DA91D2C74D8F900AD2AA4 /* ContentView.swift */,
-				C8A0B5D52C7716B300E8268B /* AudioInputViewControllerRepresentable.swift */,
-				C8A0B5D22C77165300E8268B /* AudioInputViewController.swift */,
-				C85D04342C76FA8A00B3F3CC /* RecorderLockView.swift */,
-				C81DA91F2C74D8FA00AD2AA4 /* Assets.xcassets */,
-				C81DA9212C74D8FA00AD2AA4 /* Preview Content */,
+				C80F0A8A2C77376B001C550E /* MixinSwipeToLockApp.swift */,
+				C80F0A8C2C77376B001C550E /* ContentView.swift */,
+				C80F0A982C773813001C550E /* AudioInputViewControllerRepresentable.swift */,
+				C80F0A9A2C77381D001C550E /* AudioInputViewController.swift */,
+				C80F0A9C2C77382D001C550E /* RecorderLockView.swift */,
+				C80F0A8E2C77376C001C550E /* Assets.xcassets */,
+				C80F0A902C77376C001C550E /* Preview Content */,
 			);
-			path = UIKitPanGesture;
+			path = MixinSwipeToLock;
 			sourceTree = "<group>";
 		};
-		C81DA9212C74D8FA00AD2AA4 /* Preview Content */ = {
+		C80F0A902C77376C001C550E /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				C81DA9222C74D8FA00AD2AA4 /* Preview Assets.xcassets */,
+				C80F0A912C77376C001C550E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -81,43 +81,43 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C81DA9172C74D8F900AD2AA4 /* UIKitPanGesture */ = {
+		C80F0A862C77376B001C550E /* MixinSwipeToLock */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C81DA9262C74D8FA00AD2AA4 /* Build configuration list for PBXNativeTarget "UIKitPanGesture" */;
+			buildConfigurationList = C80F0A952C77376C001C550E /* Build configuration list for PBXNativeTarget "MixinSwipeToLock" */;
 			buildPhases = (
-				C81DA9142C74D8F900AD2AA4 /* Sources */,
-				C81DA9152C74D8F900AD2AA4 /* Frameworks */,
-				C81DA9162C74D8F900AD2AA4 /* Resources */,
+				C80F0A832C77376B001C550E /* Sources */,
+				C80F0A842C77376B001C550E /* Frameworks */,
+				C80F0A852C77376B001C550E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C85D043A2C76FE4E00B3F3CC /* PBXTargetDependency */,
+				C80F0AA22C773875001C550E /* PBXTargetDependency */,
 			);
-			name = UIKitPanGesture;
+			name = MixinSwipeToLock;
 			packageProductDependencies = (
-				C85D04372C76FD1400B3F3CC /* RswiftLibrary */,
+				C80F0A9F2C77384C001C550E /* RswiftLibrary */,
 			);
-			productName = UIKitPanGesture;
-			productReference = C81DA9182C74D8F900AD2AA4 /* UIKitPanGesture.app */;
+			productName = MixinSwipeToLock;
+			productReference = C80F0A872C77376B001C550E /* MixinSwipeToLock.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C81DA9102C74D8F900AD2AA4 /* Project object */ = {
+		C80F0A7F2C77376B001C550E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					C81DA9172C74D8F900AD2AA4 = {
+					C80F0A862C77376B001C550E = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = C81DA9132C74D8F900AD2AA4 /* Build configuration list for PBXProject "UIKitPanGesture" */;
+			buildConfigurationList = C80F0A822C77376B001C550E /* Build configuration list for PBXProject "MixinSwipeToLock" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -125,55 +125,55 @@
 				en,
 				Base,
 			);
-			mainGroup = C81DA90F2C74D8F900AD2AA4;
+			mainGroup = C80F0A7E2C77376B001C550E;
 			packageReferences = (
-				C85D04362C76FD1400B3F3CC /* XCRemoteSwiftPackageReference "R.swift" */,
+				C80F0A9E2C77384C001C550E /* XCRemoteSwiftPackageReference "R.swift" */,
 			);
-			productRefGroup = C81DA9192C74D8F900AD2AA4 /* Products */;
+			productRefGroup = C80F0A882C77376B001C550E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C81DA9172C74D8F900AD2AA4 /* UIKitPanGesture */,
+				C80F0A862C77376B001C550E /* MixinSwipeToLock */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C81DA9162C74D8F900AD2AA4 /* Resources */ = {
+		C80F0A852C77376B001C550E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C81DA9232C74D8FA00AD2AA4 /* Preview Assets.xcassets in Resources */,
-				C81DA9202C74D8FA00AD2AA4 /* Assets.xcassets in Resources */,
+				C80F0A922C77376C001C550E /* Preview Assets.xcassets in Resources */,
+				C80F0A8F2C77376C001C550E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C81DA9142C74D8F900AD2AA4 /* Sources */ = {
+		C80F0A832C77376B001C550E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8A0B5D62C7716B300E8268B /* AudioInputViewControllerRepresentable.swift in Sources */,
-				C81DA91E2C74D8F900AD2AA4 /* ContentView.swift in Sources */,
-				C8A0B5D32C77165300E8268B /* AudioInputViewController.swift in Sources */,
-				C81DA91C2C74D8F900AD2AA4 /* UIKitPanGestureApp.swift in Sources */,
-				C85D04352C76FA8A00B3F3CC /* RecorderLockView.swift in Sources */,
+				C80F0A8D2C77376B001C550E /* ContentView.swift in Sources */,
+				C80F0A9D2C77382D001C550E /* RecorderLockView.swift in Sources */,
+				C80F0A992C773813001C550E /* AudioInputViewControllerRepresentable.swift in Sources */,
+				C80F0A9B2C77381D001C550E /* AudioInputViewController.swift in Sources */,
+				C80F0A8B2C77376B001C550E /* MixinSwipeToLockApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C85D043A2C76FE4E00B3F3CC /* PBXTargetDependency */ = {
+		C80F0AA22C773875001C550E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			productRef = C85D04392C76FE4E00B3F3CC /* RswiftGenerateInternalResources */;
+			productRef = C80F0AA12C773875001C550E /* RswiftGenerateInternalResources */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		C81DA9242C74D8FA00AD2AA4 /* Debug */ = {
+		C80F0A932C77376C001C550E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -236,7 +236,7 @@
 			};
 			name = Debug;
 		};
-		C81DA9252C74D8FA00AD2AA4 /* Release */ = {
+		C80F0A942C77376C001C550E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -292,14 +292,14 @@
 			};
 			name = Release;
 		};
-		C81DA9272C74D8FA00AD2AA4 /* Debug */ = {
+		C80F0A962C77376C001C550E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"UIKitPanGesture/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MixinSwipeToLock/Preview Content\"";
 				DEVELOPMENT_TEAM = GHJU9V8GHS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -313,7 +313,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tech.komaki.UIKitPanGesture;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.komaki.MixinSwipeToLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -321,14 +321,14 @@
 			};
 			name = Debug;
 		};
-		C81DA9282C74D8FA00AD2AA4 /* Release */ = {
+		C80F0A972C77376C001C550E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"UIKitPanGesture/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MixinSwipeToLock/Preview Content\"";
 				DEVELOPMENT_TEAM = GHJU9V8GHS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -342,7 +342,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tech.komaki.UIKitPanGesture;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.komaki.MixinSwipeToLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -353,20 +353,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C81DA9132C74D8F900AD2AA4 /* Build configuration list for PBXProject "UIKitPanGesture" */ = {
+		C80F0A822C77376B001C550E /* Build configuration list for PBXProject "MixinSwipeToLock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C81DA9242C74D8FA00AD2AA4 /* Debug */,
-				C81DA9252C74D8FA00AD2AA4 /* Release */,
+				C80F0A932C77376C001C550E /* Debug */,
+				C80F0A942C77376C001C550E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C81DA9262C74D8FA00AD2AA4 /* Build configuration list for PBXNativeTarget "UIKitPanGesture" */ = {
+		C80F0A952C77376C001C550E /* Build configuration list for PBXNativeTarget "MixinSwipeToLock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C81DA9272C74D8FA00AD2AA4 /* Debug */,
-				C81DA9282C74D8FA00AD2AA4 /* Release */,
+				C80F0A962C77376C001C550E /* Debug */,
+				C80F0A972C77376C001C550E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -374,7 +374,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C85D04362C76FD1400B3F3CC /* XCRemoteSwiftPackageReference "R.swift" */ = {
+		C80F0A9E2C77384C001C550E /* XCRemoteSwiftPackageReference "R.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift.git";
 			requirement = {
@@ -385,17 +385,17 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C85D04372C76FD1400B3F3CC /* RswiftLibrary */ = {
+		C80F0A9F2C77384C001C550E /* RswiftLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C85D04362C76FD1400B3F3CC /* XCRemoteSwiftPackageReference "R.swift" */;
+			package = C80F0A9E2C77384C001C550E /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = RswiftLibrary;
 		};
-		C85D04392C76FE4E00B3F3CC /* RswiftGenerateInternalResources */ = {
+		C80F0AA12C773875001C550E /* RswiftGenerateInternalResources */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C85D04362C76FD1400B3F3CC /* XCRemoteSwiftPackageReference "R.swift" */;
+			package = C80F0A9E2C77384C001C550E /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = "plugin:RswiftGenerateInternalResources";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = C81DA9102C74D8F900AD2AA4 /* Project object */;
+	rootObject = C80F0A7F2C77376B001C550E /* Project object */;
 }

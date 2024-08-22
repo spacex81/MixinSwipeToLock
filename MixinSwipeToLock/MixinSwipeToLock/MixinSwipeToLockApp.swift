@@ -1,14 +1,14 @@
 //
-//  UIKitPanGestureApp.swift
-//  UIKitPanGesture
+//  MixinSwipeToLockApp.swift
+//  MixinSwipeToLock
 //
-//  Created by 조윤근 on 8/20/24.
+//  Created by 조윤근 on 8/22/24.
 //
 
 import SwiftUI
 
 @main
-struct UIKitPanGestureApp: App {
+struct MixinSwipeToLockApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
