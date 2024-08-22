@@ -28,6 +28,16 @@ class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
     private func setupUI() {
         view.addSubview(lockView)
         lockView.translatesAutoresizingMaskIntoConstraints = false
+        
+        lockView.layer.borderColor = UIColor.red.cgColor
+        lockView.layer.borderWidth = 2.0
+        
+        NSLayoutConstraint.activate([
+            lockView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            lockView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            lockView.widthAnchor.constraint(equalToConstant: 150), // Adjust size as needed
+            lockView.heightAnchor.constraint(equalToConstant: 150) // Adjust size as needed
+        ])
     }
     
     private func setupGestureRecognizers() {
@@ -58,14 +68,38 @@ class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
             }
         case .ended:
             if !isLocked {
-                animateHideLockView()
+                finishAction(sender)
             }
         case .cancelled:
             if !isLocked {
-                animateHideLockView()
+                cancelAction(sender)
             }
-        default:
+        case .possible, .failed:
             break
+        @unknown default:
+            break
+        }
+    }
+    
+    func cancelAction(_ sender: Any) {
+        layoutForStopping()
+        animateHideLockView()
+    }
+    
+    func finishAction(_ sender: Any) {
+        layoutForStopping()
+        animateHideLockView()
+    }
+    
+    private func layoutForStopping() {
+        if isLocked {
+        } else {
+//            fadeOutLockView()
+        }
+        UIView.animate(withDuration: animationDuration, animations: {
+            self.lockView.progress = 0
+            self.preferredContentSize.width = self.view.frame.height
+        }) { (_) in
         }
     }
     
