@@ -3,7 +3,7 @@ import UIKit
 class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
 
     // Define UI elements
-    private let lockView = RecorderLockView()
+    private let lockView = LockView()
     
     private var longPressGestureRecognizer: UILongPressGestureRecognizer!
     

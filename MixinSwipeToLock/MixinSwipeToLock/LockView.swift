@@ -1,25 +1,23 @@
 import UIKit
 
-class RecorderLockView: UIView {
-    
+class LockView: UIView {
+   
     static let backgroundImage = R.image.conversation.bg_recorder_lock()!
     static let shackleImage = R.image.conversation.ic_recorder_lock_shackle()!
     static let lockBodyImage = R.image.conversation.ic_recorder_lock_body()!
     static let lockedImage = R.image.conversation.ic_recorder_lock_locked()!
     static let directionIndicationImage = R.image.conversation.ic_recorder_lock_direction_up()!
     
-    let backgroundImageView = UIImageView(image: RecorderLockView.backgroundImage)
-    let lockShackleImageView = UIImageView(image: RecorderLockView.shackleImage)
-    let lockBodyImageView = UIImageView(image: RecorderLockView.lockBodyImage)
-    let lockedImageView = UIImageView(image: RecorderLockView.lockedImage)
-    let directionIndicatorImageView = UIImageView(image: RecorderLockView.directionIndicationImage)
+    let backgroundImageView = UIImageView(image: LockView.backgroundImage)
+    let lockShackleImageView = UIImageView(image: LockView.shackleImage)
+    let lockBodyImageView = UIImageView(image: LockView.lockBodyImage)
+    let directionIndicatorImageView = UIImageView(image: LockView.directionIndicationImage)
     
     private let lockedIconZoomingTransform = CGAffineTransform(scaleX: 1.3, y: 1.3)
     private let lockedIconZoomingAnimationDuration: TimeInterval = 0.2
     
     var isLocked = false {
         didSet {
-            lockedImageView.isHidden = !isLocked
             backgroundImageView.isHidden = isLocked
             lockShackleImageView.isHidden = isLocked
             lockBodyImageView.isHidden = isLocked
@@ -92,16 +90,12 @@ class RecorderLockView: UIView {
         addSubview(lockShackleImageView)
         addSubview(lockBodyImageView)
         addSubview(directionIndicatorImageView)
-        lockedImageView.frame.origin = BackgroundOrigin.end
-        addSubview(lockedImageView)
     }
     
     func performLockedIconZoomAnimation(completion: @escaping () -> Void) {
         UIView.animate(withDuration: lockedIconZoomingAnimationDuration, delay: 0, options: .curveEaseIn, animations: {
-            self.lockedImageView.transform = self.lockedIconZoomingTransform
         }, completion: nil)
         UIView.animate(withDuration: lockedIconZoomingAnimationDuration, delay: lockedIconZoomingAnimationDuration, options: [.curveEaseOut, .beginFromCurrentState], animations: {
-            self.lockedImageView.transform = .identity
         }) { (_) in
             completion()
         }
@@ -109,7 +103,7 @@ class RecorderLockView: UIView {
     
 }
 
-extension RecorderLockView {
+extension LockView {
     
     static let lockedLockSize = CGSize(width: max(shackleImage.size.width, lockBodyImage.size.width), height: shackleImage.size.height + lockBodyImage.size.height + ShackleBottomMargin.end)
     static let verticalDistance: CGFloat = 50
