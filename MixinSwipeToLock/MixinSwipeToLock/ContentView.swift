@@ -5,7 +5,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            AudioInputViewControllerRepresentable()
+            LockViewControllerRepresentable()
             if viewModel.isLocked {
                 Button {
                     viewModel.isLocked = false

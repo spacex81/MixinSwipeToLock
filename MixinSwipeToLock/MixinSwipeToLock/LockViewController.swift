@@ -1,7 +1,7 @@
 import UIKit
 import Combine
 
-class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
+class LockViewController: UIViewController, UIGestureRecognizerDelegate {
 
     // Define UI elements
     private let lockView = LockView()
@@ -111,7 +111,7 @@ class AudioInputViewController: UIViewController, UIGestureRecognizerDelegate {
         NSLog("LOG: layoutForStopping")
         UIView.animate(withDuration: animationDuration, animations: {
             self.lockView.progress = 0
-            self.lockView.setNeedsLayout() 
+            self.lockView.setNeedsLayout()
         })
     }
     
